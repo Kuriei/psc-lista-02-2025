@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class CustoEurotrip {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        double totalViagem = 0;
+        String[] destinos = {"Alemanha", "Portugal", "Itália"};
+        
+        for (String destino : destinos) {
+            System.out.print("Digite o preço da viagem para " + destino + ": ");
+            totalViagem += scanner.nextDouble();
+        }
+        
+        System.out.print("Digite a quantidade de pessoas que irão viajar: ");
+        int pessoas = scanner.nextInt();
+        
+        double custoTotal = totalViagem * pessoas;
+        System.out.println("O custo total da viagem para " + pessoas + " pessoas é: R$ " + custoTotal);
+        
+        scanner.close();
+    }
+}
